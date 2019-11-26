@@ -13,18 +13,24 @@ class HomeController extends Controller
 
 
     	// get all available jobs
-    	$jobs = Jobs::paginate(2);    
-
+    	$total_jobs_array = Jobs::all();
+    	//have to count before pagination
+    	$total_jobs = count($total_jobs_array);
     	
-    	if (count($jobs) > 0) {
-    		return view('welcome', compact('jobs'));
+    	$jobs = Jobs::orderBy('id', 'DESC')
+    					->paginate(2);
+    					
+    	
+    	if (count($jobs) > 0) {   		
+    		
+    		return view('welcome', compact('jobs', 'total_jobs'));
     	}
 
     	//fallback
     	$jobs = array();
-    	return view('welcome', compact('jobs'));
+    	return view('welcome', compact('jobs', 'total_jobs'));
     	
     }
 
-    
+
 }

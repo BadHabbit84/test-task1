@@ -27,7 +27,7 @@
     <div id="app" class="container"> 
 
        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-			<a class="navbar-brand" href="#">Navbar</a>			  
+			<a class="navbar-brand" href="{{url('/')}}">Navbar</a>			  
 		</nav>	    
         
         <main class="container">
