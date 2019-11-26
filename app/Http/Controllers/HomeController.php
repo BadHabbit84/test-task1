@@ -14,7 +14,7 @@ class HomeController extends Controller
 
     	// get all available jobs
     	$jobs = Jobs::paginate(2);    
-//var_dump($jobs);exit;
+
     	
     	if (count($jobs) > 0) {
     		return view('welcome', compact('jobs'));
@@ -25,4 +25,6 @@ class HomeController extends Controller
     	return view('welcome', compact('jobs'));
     	
     }
+
+    
 }

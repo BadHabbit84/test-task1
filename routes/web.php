@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('post-job-form', 'JobsController@newJob');
+Route::post('save_job', 'JobsController@save');

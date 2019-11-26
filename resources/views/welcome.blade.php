@@ -20,10 +20,19 @@
 
     </div>
     <div class="col-md-9" style="background-color: green">
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="col-md-12">
            @if(count($jobs) > 0)
                 Total jobs {{count($jobs)}}
            @endif
+
+           <a class="btn" href="{{ url('post-job-form') }}">ADD</a>
+           
         </div>
 
         @foreach($jobs as $job)
