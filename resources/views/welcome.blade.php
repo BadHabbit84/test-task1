@@ -12,7 +12,7 @@
         <form method="post" action="{{ url('filter_jobs') }}">
             @csrf
             <div class="input-group mb-3">
-                <input type="text" name="search_for" class="form-control" placeholder="Job Title, Keyword..." aria-label="keyword-filter" aria-describedby="keyword-filter">
+                <input type="text" name="search_for" class="form-control" placeholder="Job Title, Location..." aria-label="keyword-filter" aria-describedby="keyword-filter">
             </div>
 
             <!-- filter result button -->
@@ -31,7 +31,8 @@
                 {{ session('status') }}
             </div>
         @endif
-        <!-- Mini header -->
+
+        <!-- all jobs page header -->
         <div class="row mb-3 jobs-list-header">
             <div class="col-md-3">
                 @if(isset($jobs))
@@ -56,7 +57,7 @@
                             <!-- details -->
                             <div class="row">
                                 <div class="col-md-2"><i class="fa fa-map-marker-alt"></i> {{ucfirst(trans($job->job_location))}}</div> 
-                                <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{number_format($job->salary_min)}} - {{$job->salary_max}}</div>
+                                <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{number_format($job->salary_min)}} - {{number_format($job->salary_max)}}</div>
                                 <div class="col-md-6 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$job->created_at->diffForHumans()}}</small></div>
                             </div>
                             <hr/>
@@ -91,8 +92,8 @@
                     <!-- details -->
                     <div class="row">
                         <div class="col-md-2"><i class="fa fa-map-marker-alt"></i> {{ucfirst(trans($result->job_location))}}</div> 
-                        <div class="col-md-2"><i class="fa fa-pound-sign"></i> {{$result->job_salary}}</div>
-                        <div class="col-md-8 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$result->created_at->diffForHumans()}}</small></div>
+                        <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{$result->salary_min}} - {{$result->salary_max}}</div>
+                        <div class="col-md-6 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$result->created_at->diffForHumans()}}</small></div>
                     </div>
                     <hr/>
 
