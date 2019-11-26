@@ -35,7 +35,7 @@
         <!-- all jobs page header -->
         <div class="row mb-3 jobs-list-header">
             <div class="col-md-3">
-                @if(isset($jobs))
+                @if(isset($total_jobs))
                     Available Vacancies ({{$total_jobs}})
                 @endif
                
@@ -92,7 +92,7 @@
                     <!-- details -->
                     <div class="row">
                         <div class="col-md-2"><i class="fa fa-map-marker-alt"></i> {{ucfirst(trans($result->job_location))}}</div> 
-                        <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{$result->salary_min}} - {{$result->salary_max}}</div>
+                        <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{number_format($result->salary_min)}} - {{number_format($result->salary_max)}}</div>
                         <div class="col-md-6 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$result->created_at->diffForHumans()}}</small></div>
                     </div>
                     <hr/>

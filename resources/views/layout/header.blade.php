@@ -7,7 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Test App</title>   
+    <title>Test App</title>
+
+    <!-- Scripts -->
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -36,12 +39,13 @@
       
     </div>
         
-     <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+     <!-- <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script> -->
      <script type="application/javascript"
       src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">      
-    </script>    
+    </script>
+    <script type="text/javascript" src="{{asset('js/custom.js')}}"></script> 
         
 </body>
 </html>

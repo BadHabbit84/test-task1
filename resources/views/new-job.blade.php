@@ -19,6 +19,7 @@
 	<div class="">
 		<h4>Please fill out the form</h4>
 	</div>
+	<hr />
 	<div class="form-group">
 		<label for="jobTitle">Job Title*</label>
     	<input type="text" name="job_title" class="form-control" id="jobTitle" aria-describedby="jobTitle" placeholder="Enter job title">

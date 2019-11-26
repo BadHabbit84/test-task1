@@ -57,7 +57,9 @@ class JobsController extends Controller
 
     	$search_result = array();
 
-    	$searched = true;
+    	$total_jobs_array = Jobs::all();
+	    //have to count before pagination
+	    $total_jobs = count($total_jobs_array);    
 
     	if ($search_for) {
 
@@ -72,22 +74,19 @@ class JobsController extends Controller
     						->orderBy('id', 'DESC')
     						->get();
 
-    		return view('welcome', compact('search_result', 'searched'));
+    		//if searched show available jobs based on search result 
+    		$total_jobs = count($search_result);
+
+    		return view('welcome', compact('search_result', 'total_jobs'));
     	}
     	else {
 
-    		//fallback
-    		$searched = false;
-
-    		$total_jobs_array = Jobs::all();
-	    	//have to count before pagination
-	    	$total_jobs = count($total_jobs_array);
-
+    		//fallback    		
     		$jobs = Jobs::orderBy('id', 'DESC')
     					->paginate(2);
 
 
-    		return view('welcome', compact('jobs', 'searched', 'total_jobs'));
+    		return view('welcome', compact('jobs', 'total_jobs'));
     	}
 
     	

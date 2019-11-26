@@ -25,14 +25,14 @@
 	color: green;
 }
 #form {
-	padding: 11px 18px 34px 18px;
+	padding: 27px 18px 34px 18px;
 	box-shadow: lightgrey 3px 3px 6px;
 	border: 1px solid lightgrey;
 	border-radius: 3px;
 }
 .post-job-sidebar {
 
-	border-right: 4px solid teal;
+	border-right: 4px solid firebrick;
 	
 	padding-right: 12px;
 	
