@@ -21,7 +21,8 @@ class JobsController extends Controller
     	$job_title = $request->job_title;
     	$job_description = $request->job_description;
     	$job_location = $request->job_location;
-    	$job_salary = $request->job_salary;
+    	$salary_min = $request->salary_min;
+    	$salary_max = $request->salary_max;
 
     	//some basic checks
     	//would be better do checks before submitting the form via JS
@@ -31,7 +32,7 @@ class JobsController extends Controller
     		return redirect('post-job-form')->with('status', 'Please complete all the fields!');
     	}
 
-    	if (!ctype_digit($job_salary)) {
+    	if (!ctype_digit($salary_min) || !ctype_digit($salary_max)) {
     		return redirect('post-job-form')->with('status', 'Salary must be a Number');
     	}
 
@@ -40,7 +41,8 @@ class JobsController extends Controller
     	$new_job->job_title = $job_title;
     	$new_job->job_description = $job_description;
     	$new_job->job_location = $job_location;
-    	$new_job->job_salary = $job_salary;
+    	$new_job->salary_min = $salary_min;
+    	$new_job->salary_max = $salary_max;
 
     	$new_job->save();
 
@@ -84,7 +86,7 @@ class JobsController extends Controller
     		$jobs = Jobs::orderBy('id', 'DESC')
     					->paginate(2);
 
-    					
+
     		return view('welcome', compact('jobs', 'searched', 'total_jobs'));
     	}
 

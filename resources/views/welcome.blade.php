@@ -56,8 +56,8 @@
                             <!-- details -->
                             <div class="row">
                                 <div class="col-md-2"><i class="fa fa-map-marker-alt"></i> {{ucfirst(trans($job->job_location))}}</div> 
-                                <div class="col-md-2"><i class="fa fa-pound-sign"></i> {{$job->job_salary}}</div>
-                                <div class="col-md-8 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$job->created_at->diffForHumans()}}</small></div>
+                                <div class="col-md-4"><i class="fa fa-pound-sign"></i> {{number_format($job->salary_min)}} - {{$job->salary_max}}</div>
+                                <div class="col-md-6 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$job->created_at->diffForHumans()}}</small></div>
                             </div>
                             <hr/>
                             <!-- description -->
