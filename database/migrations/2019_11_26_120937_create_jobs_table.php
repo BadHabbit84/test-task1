@@ -16,9 +16,10 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('job_title', 100)->default(null);
-            $table->string('job_description', 200)->default(null);
+            $table->longText('job_description')->default(null);
             $table->string('job_location', 100)->default(null);
-            $table->integer('job_salary',7)->default(null);
+            $table->integer('salary_min',7)->default(null);
+            $table->integer('salary_max',7)->default(null);
             $table->timestamps();
         });
     }
