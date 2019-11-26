@@ -20,7 +20,11 @@
 
     </div>
     <div class="col-md-9" style="background-color: green">
-        Posts
+        <div class="col-md-12">
+            reults total 10...
+        </div>
+
+        
     </div>
 </div>
 
