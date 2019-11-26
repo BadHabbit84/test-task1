@@ -22,15 +22,15 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 <body>
+	
 
     <div id="app" class="container"> 
-       
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <a class="navbar-brand" href="#">Navbar</a>
-		  
-	</nav>
+
+       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<a class="navbar-brand" href="#">Navbar</a>			  
+		</nav>	    
         
-        <main class="container">          
+        <main class="container">
             @yield('content')           
         </main>
       
