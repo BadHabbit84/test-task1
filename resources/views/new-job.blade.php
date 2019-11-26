@@ -31,9 +31,15 @@
 		<label for="jobLocation">Job Location*</label>
     	<input type="text" name="job_location" class="form-control" id="jobLocation" aria-describedby="jobLocation" placeholder="Enter job location">
 	</div>
-	<div class="form-group">
-		<label for="jobSalary">Job Salary*</label>
-    	<input type="text" name="job_salary" class="form-control" id="jobSalary" aria-describedby="jobSalary" placeholder="Enter job salary">
+	<label for="jobSalary">Job Salary*</label>
+	<div class="row">
+		<div class="form-group col-md-3">			
+	    	<input type="text" name="salary_min" class="form-control" id="jobSalary" aria-describedby="jobSalary" placeholder="Minimum">
+		</div>
+		<div class="form-group col-md-1 text-center">&ndash;</div>
+		<div class="form-group col-md-3">		
+	    	<input type="text" name="salary_max" class="form-control" aria-describedby="jobSalary" placeholder="Maximum">
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-1">

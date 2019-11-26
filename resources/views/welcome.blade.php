@@ -33,13 +33,13 @@
         @endif
         <!-- Mini header -->
         <div class="row mb-3 jobs-list-header">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 @if(isset($jobs))
-                    Total jobs {{$total_jobs}}                
+                    Available Vacancies ({{$total_jobs}})
                 @endif
                
             </div>
-            <div class="col-md-10 text-right">
+            <div class="col-md-9 text-right">
                 <a class="btn pull-right btn-primary btn-sm add-btn" href="{{ url('post-job-form') }}">ADD NEW VACANCY</a>
             </div>
         </div>
@@ -89,10 +89,12 @@
                     <h4><strong>{{$result->job_title}}</strong></h4>
 
                     <!-- details -->
-                    <div>
-                        <span><i class="fa fa-map-marker-alt"></i> {{$result->job_location}}</span> 
-                        <span><i class="fa fa-pound-sign"></i> {{$result->job_salary}}</span>
+                    <div class="row">
+                        <div class="col-md-2"><i class="fa fa-map-marker-alt"></i> {{ucfirst(trans($result->job_location))}}</div> 
+                        <div class="col-md-2"><i class="fa fa-pound-sign"></i> {{$result->job_salary}}</div>
+                        <div class="col-md-8 text-right"><small class="text-muted"><i class="fa fa-clock"></i> {{$result->created_at->diffForHumans()}}</small></div>
                     </div>
+                    <hr/>
 
                     <!-- description -->
                     <p>
