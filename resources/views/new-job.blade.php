@@ -46,7 +46,12 @@
 </form>
 </div>
 <div class="col-md-4 text-right">
-	Some additional info comes here
+	<div class="post-job-sidebar">
+		<div>All fields marked with * are mandatory</div>
+		<div>Some more useful information</div>
+		<div>Some more useful information</div>
+		<div>Some more useful information</div>
+	</div>
 </div>
 </div>
 @endsection

@@ -4,7 +4,7 @@
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <h4>Filter Vacancies</h4>
+        <h5>Filter Vacancies</h5>
         <hr />
         <div class="mb-2">Keywords</div>
 

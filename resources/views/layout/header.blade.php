@@ -23,18 +23,18 @@
 </head>
 <body>
 	
-
-    <div id="app" class="container"> 
-
-       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-			<a class="navbar-brand" href="{{url('/')}}">Navbar</a>			  
-		</nav>	    
+	<nav class="navbar navbar-expand-lg navbar-light main-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="{{url('/')}}">VACANCIES</a>
+		</div>
+	</nav>	 
+    <div id="app">           
         
         <main class="container">
             @yield('content')           
         </main>
       
-       </div>
+    </div>
         
      <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
      <script type="application/javascript"
