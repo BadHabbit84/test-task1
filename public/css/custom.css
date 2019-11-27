@@ -1,0 +1,46 @@
+.job-container {
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	padding: 17px 23px;
+	box-shadow: lightgrey 3px 3px 6px;
+}
+
+.jobs-list-header {
+	background-color: lightgrey;
+	padding: 9px 4px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	color: grey;
+}
+
+.add-btn {
+	color: white;
+	font-size: 80%;
+}
+
+.fa-map-marker-alt {
+	color: red;
+}
+.fa-pound-sign {
+	color: green;
+}
+#form {
+	padding: 27px 18px 34px 18px;
+	box-shadow: lightgrey 3px 3px 6px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
+.post-job-sidebar {
+
+	border-right: 4px solid firebrick;
+	
+	padding-right: 12px;
+	
+}
+.main-navbar {
+	background-color: teal;
+	
+}
+.navbar-brand {
+	color: white!important;
+}

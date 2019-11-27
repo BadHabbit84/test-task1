@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('post-job-form', 'JobsController@newJob');
+Route::post('save_job', 'JobsController@save');
+Route::post('filter_jobs', 'JobsController@filterJobs');
