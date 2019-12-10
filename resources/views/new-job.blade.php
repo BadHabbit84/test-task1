@@ -22,15 +22,15 @@
 	<hr />
 	<div class="form-group">
 		<label for="jobTitle">Job Title*</label>
-    	<input type="text" name="job_title" class="form-control" id="jobTitle" aria-describedby="jobTitle" placeholder="Enter job title">
+    	<input type="text" oninput="check();" name="job_title" class="form-control" id="jobTitle" aria-describedby="jobTitle" placeholder="Enter job title">
 	</div>
 	<div class="form-group">
 		<label for="jobDescription">Job Description*</label>
-    	<input type="text" name="job_description" class="form-control" id="jobDescription" aria-describedby="jobDescription" placeholder="Enter job description">
+    	<input type="text" oninput="check();" name="job_description" class="form-control" id="jobDescription" aria-describedby="jobDescription" placeholder="Enter job description">
 	</div>
 	<div class="form-group">
 		<label for="jobLocation">Job Location*</label>
-    	<input type="text" name="job_location" class="form-control" id="jobLocation" aria-describedby="jobLocation" placeholder="Enter job location">
+    	<input type="text" oninput="check();" name="job_location" class="form-control" id="jobLocation" aria-describedby="jobLocation" placeholder="Enter job location">
 	</div>
 	<label for="jobSalary">Job Salary*</label>
 	<div class="row">
@@ -47,7 +47,7 @@
     		<a class="btn btn-default btn-sm" href="{{url('/')}}"><i class="fa fa-chevron-left"></i> back</a>
     	</div>
     	<div class="col-md-11 text-right">
-    		<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-paper-plane"></i> SUBMIT JOB</button>
+    		<button id="btn" type="submit" class="btn btn-primary btn-sm" disabled><i class="fa fa-paper-plane"></i> SUBMIT JOB</button>
     	</div>
 	</div>
 </form>
