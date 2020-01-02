@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
-<body>
+<body onload="test()">
 	
 	<nav class="navbar navbar-expand-lg navbar-light main-navbar">
 		<div class="container">

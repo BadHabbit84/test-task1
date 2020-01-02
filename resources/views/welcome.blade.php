@@ -20,9 +20,14 @@
                 FILTER RESULTS
             </button>
         </form>
-        
-
+        <div class="row mt-5">
+            <div class="col-md-12 pt-3 pb-3">
+                <h6 class="text-center text-info">Latest Jobs!</h6>
+            <div id="freshJobs" style="border: 1px solid black"></div>
+        </div>
+        </div>
     </div>
+
     <div class="col-md-9">
 
         <!-- Flash message -->
@@ -113,7 +118,7 @@
 
        
 
-    </div>
+    </div>   
 </div>
 
 @endsection
